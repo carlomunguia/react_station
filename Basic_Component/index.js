@@ -1,19 +1,18 @@
-function getMood() {
-    const moods = ['Angry', 'Hungry', 'Silly', 'Quiet', 'Paranoid']
-    return moods[Math.floor(Math.random() * moods.length)]
+function getRandom() {
+    return Math.floor(Math.random() * 10) + 1
 }
 
-class JSXDemo extends React.Component {
+class NumPicker extends React.Component {
     render() {
+        const num = getRandom()
         return (
             <div>
-                <h1>
-                    My Current Mood is: {getMood()}
-                </h1>
+                <h1>Your number is...{num}</h1>
+                <p>{num == 7 ? 'Congrats' : 'Unlucky'}</p>
             </div>
         )
     }
 }
 
-ReactDOM.render(<JSXDemo />, document.getElementById('root'))
+ReactDOM.render(<NumPicker />, document.getElementById('root'))
 
