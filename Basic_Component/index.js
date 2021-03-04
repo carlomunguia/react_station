@@ -1,14 +1,19 @@
-class Hello extends React.Component {
+function getMood() {
+    const moods = ['Angry', 'Hungry', 'Silly', 'Quiet', 'Paranoid']
+    return moods[Math.floor(Math.random() * moods.length)]
+}
+
+class JSXDemo extends React.Component {
     render() {
         return (
             <div>
-                <h1>Hello There!</h1>
-                <h1>Hello There!</h1>
-                <h1>Hello There!</h1>
+                <h1>
+                    My Current Mood is: {getMood()}
+                </h1>
             </div>
         )
     }
 }
 
-ReactDOM.render(<Hello />, document.getElementById('root'))
+ReactDOM.render(<JSXDemo />, document.getElementById('root'))
 
