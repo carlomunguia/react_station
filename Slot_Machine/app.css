@@ -1,0 +1,15 @@
+.Machine {
+  border: 2px solid black;
+  background: lightblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.win {
+  background: lightcoral;
+  color: cornflowerblue;
+}
+
+.lose {
+  color: crimson;
+  background: firebrick;
+}
